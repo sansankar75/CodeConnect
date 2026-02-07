@@ -5,7 +5,7 @@
 
 **Code Connect** is a powerful VS Code extension that visualizes your codebase structure as an interactive dependency graph. Understand your code architecture at a glance with automatic AST parsing and real-time updates.
 
-![Code Connect Demo](https://via.placeholder.com/800x450?text=Code+Connect+Demo)
+![Code Connect Demo]([https://via.placeholder.com/800x450?text=Code+Connect+Demo](https://www.linkedin.com/posts/sankara-pandian-6ab7b9259_code-connect-extension-for-the-vs-code-activity-7425867499952594944-ibFg?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD-oH6MB8s4coApK0CXPKFj4jlTUwsSVNM0))
 
 ## Features
 
