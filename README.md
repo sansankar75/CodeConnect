@@ -237,7 +237,7 @@ MIT License - see [LICENSE](LICENSE) file for details
 
 - 🐛 Report bugs: [GitHub Issues](https://github.com/code-connect/code-connect/issues)
 - 💬 Ask questions: [GitHub Discussions](https://github.com/code-connect/code-connect/discussions)
-- 📧 Email: support@code-connect.dev
+- 📧 Email: sansankar472@gmail.com
 
 ---
 
