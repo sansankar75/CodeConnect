@@ -1,0 +1,103 @@
+{
+  "name": "code-connect",
+  "displayName": "Code Connect",
+  "description": "Visualize your codebase structure with interactive dependency graphs its only work on python , js , typescript and in future i focus on extent the list ",
+  "version": "1.0.0",
+  "publisher": "SankaraPandian",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:code-connect.showGraph",
+    "onStartupFinished"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "code-connect.showGraph",
+        "title": "Code Connect: Show Dependency Graph",
+        "icon": "$(graph)"
+      },
+      {
+        "command": "code-connect.refreshGraph",
+        "title": "Code Connect: Refresh Graph",
+        "icon": "$(refresh)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "code-connect.showGraph",
+          "group": "navigation",
+          "when": "resourceLangId =~ /javascript|typescript|python/"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Code Connect",
+      "properties": {
+        "codeConnect.maxFilesToScan": {
+          "type": "number",
+          "default": 1000,
+          "description": "Maximum number of files to scan"
+        },
+        "codeConnect.excludePatterns": {
+          "type": "array",
+          "default": [
+            "**/node_modules/**",
+            "**/dist/**",
+            "**/build/**",
+            "**/.git/**",
+            "**/venv/**",
+            "**/__pycache__/**"
+          ],
+          "description": "Glob patterns to exclude from scanning"
+        },
+        "codeConnect.includePatterns": {
+          "type": "array",
+          "default": [
+            "**/*.js",
+            "**/*.jsx",
+            "**/*.ts",
+            "**/*.tsx",
+            "**/*.py"
+          ],
+          "description": "Glob patterns to include in scanning"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.74.0",
+    "eslint": "^8.0.0"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.23.0",
+    "@babel/traverse": "^7.23.0",
+    "acorn": "^8.11.0",
+    "acorn-walk": "^8.3.0",
+    "minimatch": "^9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sansankar75"
+  },
+  "keywords": [
+    "visualization",
+    "dependencies",
+    "graph",
+    "code analysis",
+    "ast"
+  ],
+  "license": "MIT"
+}
